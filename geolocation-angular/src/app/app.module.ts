@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home/home.component';
 import { DistrictMapComponent } from './map/district-map/district-map.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,11 @@ import { DistrictMapComponent } from './map/district-map/district-map.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBgQzIeYakAUCINrppgKl59-7_ISKWpT3s',
+      libraries: ['places']
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

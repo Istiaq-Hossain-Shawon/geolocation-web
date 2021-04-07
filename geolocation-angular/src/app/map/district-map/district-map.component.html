@@ -1,1 +1,19 @@
 <p>district-map works!</p>
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]='zoom'>
+   
+    <agm-marker 
+
+            *ngFor="let marker of markers" 
+
+            [latitude]="marker.latitude" 
+
+              [longitude]="marker.longitude">    
+
+                  <agm-info-window #infoWindow>
+
+                      {{ marker.name }}
+
+                </agm-info-window>
+
+        </agm-marker>
+  </agm-map>

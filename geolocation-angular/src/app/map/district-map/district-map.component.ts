@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Marker } from 'src/app/models/Marker';
 import { User } from 'src/app/models/User';
 import { AuthService } from 'src/app/services/auth.service';
 import { MapService } from 'src/app/services/map.service';
@@ -10,7 +11,14 @@ import { MapService } from 'src/app/services/map.service';
 })
 export class DistrictMapComponent implements OnInit {
 
-  constructor(private authService:AuthService,private mapService:MapService) { }
+  lat =23.777628;
+  lng = 90.405449;
+  zoom=7;
+  markers =[];
+  constructor(private authService:AuthService,private mapService:MapService) { 
+
+    
+  }
 
   ngOnInit(): void {
     this.loginProcess();
@@ -26,6 +34,7 @@ export class DistrictMapComponent implements OnInit {
         this.mapService.getLocations(result.jwt).subscribe(locationResult=>{
           console.log("locationResult");
           console.log(locationResult);
+          this.markers=locationResult;
         });
       }
     },err => {
@@ -33,5 +42,6 @@ export class DistrictMapComponent implements OnInit {
       console.log(err)
     })
   }
-
+  
+ 
 }
