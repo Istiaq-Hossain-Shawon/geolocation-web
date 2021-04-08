@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home/home.component';
 import { DistrictMapComponent } from './map/district-map/district-map.component';
 import { AgmCoreModule } from '@agm/core';
+import { LocalStorageService } from './services/localstorage.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { AgmCoreModule } from '@agm/core';
       libraries: ['places']
     })
   ],
-  providers: [],
+  providers: [LocalStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
