@@ -31,7 +31,7 @@ $ cd geolocation-angular
 ```
 npm install
 ```
-#### Step 4: serve with hot reload at localhost:4200
+#### Step 4: serve with  reload at localhost:4200
 ```
 ng serve
 ```
