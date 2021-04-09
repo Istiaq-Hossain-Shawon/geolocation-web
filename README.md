@@ -1,5 +1,5 @@
 # Geo-location using Angular 
-An Angular 11 Sample Project to Implement google map to show  five district with marker.
+An Angular 11 Sample Project to Implement google map to show  five districts with marker.
 
 ###### Before Running this Project
  1. Install npm packages using 'npm install' command.
@@ -16,30 +16,23 @@ Visit: https://geolocation-web.herokuapp.com/
 
 Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations.
 
-### Usage
+### Follow these steps to get started:
 
+#### Step 1: Clone this repository
 ``` bash
-# clone the repo
+
 $ git clone https://github.com/Istiaq-Hossain-Shawon/geolocation-web.git
-
-# go into app's directory
+```
+#### Step 1: go into app's directory
+```
 $ cd geolocation-angular
-
-# install dependencies
+```
+#### Step 3: install dependencies
+```
 npm install
-
-# serve with hot reload at localhost:4200
+```
+#### Step 4: serve with hot reload at localhost:4200
+```
 ng serve
+```
 
-# build for production with minification
-ng build
-```
-### Port number 4200 is already in use. Type below command in cmd:
-``` bash
-Step 1: Find the connection’s PID
-> netstat -ano | findstr :yourPortNumber
-Then locate the PID (something like 10764)
-Step 2: Kill the process using it’s PID
-> tskill yourPID
-Step 3: Restart your server
-```
